@@ -1,12 +1,16 @@
+// /* eslint-disable react/prop-types */
+// /* eslint-disable no-unused-vars */
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import axios from 'axios';
+import PropTypes from 'prop-types';
 
 axios.defaults.withCredentials = true;
 
 class Login extends React.Component {
     constructor(props) {
         super(props);
+        console.log('props', props)
 
         this.state = {
             email: '',
@@ -18,8 +22,11 @@ class Login extends React.Component {
         this.setState({ [key]: e.target.value });
     };
     render() {
+        console.log('fffffffffff', this)
+        console.log(this.props)
         const { email, password } = this.state;
         const { handleIsLoginChange } = this.props;
+        console.log(this.props)
         return (
             <div>
                 <center>
@@ -32,8 +39,9 @@ class Login extends React.Component {
                                     email: email,
                                     password: password
                                 })
-                                .then(() => {
-                                    handleIsLoginChange();
+                                .then((data) => {
+                                    console.log(data)
+                                    handleIsLoginChange(data);
                                     this.props.history.push('/');
                                 })
                                 .catch(err => console.log(err));
@@ -86,5 +94,8 @@ class Login extends React.Component {
     }
 }
 
+Login.propTypes = {
+    handleIsLoginChange: PropTypes.func,
+};
 export default withRouter(Login);
 

@@ -14,16 +14,17 @@ class App extends React.Component {
   state = {
     isLogin: false,
     userinfo: {}
-  }
+  };
 
   handleIsLoginChange() {
-    this.setState({ isLogin: true });
-    axios.get('http://3.34.193.46:5000/user').then(res => {
-      console.log(res.data);
-      this.setState({ userinfo: res.data });
+    axios.get('http://3.34.193.46:5000/user/info').then(res => {
+      console.log(res);
+      this.setState({
+        isLogin: true,
+        userinfo: res.data
+      });
     });
   }
-
 
   render() {
     const { isLogin, userinfo } = this.state;

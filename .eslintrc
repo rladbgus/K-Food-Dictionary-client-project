@@ -14,7 +14,12 @@
         "plugin:react/recommended"
     ],
     "plugins": [
-        "import"
+        "import",
+        "typescript-eslint"
     ],
-    "rules": {}
+    "rules": {},
+    // "react/prop-types": [
+    //     "enabled",
+    //     { "ignore": "ignore", "customValidators": "customValidator" }
+    //   ]
 }

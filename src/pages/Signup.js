@@ -36,8 +36,8 @@ class Signup extends React.Component {
                                         this.props.history.push('/signin')
                                     }
                                 })
-                                .catch(err => console.log(err),
-                                    alert('가입에 실패했습니다.'));
+                                .catch(err => console.log(err,
+                                    alert('가입에 실패했습니다.')));
                         }}
                     >
 
