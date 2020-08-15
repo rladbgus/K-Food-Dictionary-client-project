@@ -1,14 +1,20 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
+import Nav from "./pages/Nav";
+import App from "./App";
+import "./style.css";
 import * as serviceWorker from './serviceWorker';
 import { BrowserRouter } from 'react-router-dom';
 
+// index 에서는 App 렌더링과 Nav 렌더링을 합니다.
+
 ReactDOM.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>,
+  <div>
+    <BrowserRouter>
+      <Nav></Nav>
+      <App></App>
+    </BrowserRouter>
+  </div>,
   document.getElementById('root'),
 );
 

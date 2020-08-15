@@ -1,107 +1,26 @@
-// import React from 'react';
-// import { withRouter } from 'react-router-dom';
-// import axios from 'axios';
+import React from "react";
+import { Link } from "react-router-dom";
+import crabImg from "../../images/crab.jpg"
 
-// class GrainList extends React.Component {
-//     constructor(props) {
-//         super(props);
+// 이 파일은 곡물 리스트를 보여주는 페이지입니다
+// 하단의 이미지 링크들을 클릭 시 곡물 카테고리로 이동합니다. 
 
-//         this.state = {
+class GrainList extends React.Component {
+    render() {
+        return (
+            <div>
+                <h1>Grain Category</h1>
+                <Link to="/contents"></Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+                <Link to="/contents" className="link"><img id="categoryImage" src={crabImg} alt="main"></img>GRAIN</Link>
+            </div>
+        )
+    }
+}
 
-//         }
-//     }
-//     render() {
-//         return (
-//             <div>
-//                 <h2>곡물 페이지입니다.</h2>
-
-//             </div>
-//         )
-//     }
-// }
-
-
-
-//                     <form
-//                         onSubmit={e => {
-//                             e.preventDefault();
-//                             return axios
-//                                 .post('http://3.34.193.46:5000/user/login', {
-//                                     email: email,
-//                                     password: password
-//                                 })
-//                                 .then(() => {
-//                                     handleIsLoginChange();
-//                                     // eslint-disable-next-line react/prop-types
-//                                     this.props.history.push('/');
-//                                 })
-//                                 .catch(err => console.log(err));
-//                         }}
-//                     >
-
-//                         <div>
-//                             <input
-//                                 style={{
-//                                     width: '400px',
-//                                     height: '30px',
-//                                     margin: '5px',
-//                                     borderRadius: '5px'
-//                                 }}
-//                                 type="email"
-//                                 placeholder="Eamil"
-//                                 onChange={this.handleInputValue('email')}
-//                             ></input>
-//                         </div>
-//                         <div>
-//                             <input
-//                                 style={{
-//                                     width: '400px',
-//                                     height: '30px',
-//                                     margin: '5px',
-//                                     borderRadius: '5px'
-//                                 }}
-//                                 type="password"
-//                                 placeholder="Password"
-//                                 onChange={this.handleInputValue('password')}
-//                             ></input>
-//                         </div>
-//                         <button
-//                             style={{
-//                                 width: '200px',
-//                                 height: '30px',
-//                                 margin: '5px',
-//                                 borderRadius: '5px',
-//                                 backgroundColor: 'lightblack',
-//                                 color: "black"
-//                             }}
-//                             type="submit"
-//                         >
-//                             Login
-//                 </button>
-//                     </form>
-//                 </center>
-//             </div>
-//         );
-//     }
-// }
-
-// export default withRouter(Login);
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// export default GrainList;
+export default GrainList;
 
